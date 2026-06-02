@@ -1,12 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, Text, View, SafeAreaViewBase} from 'react-native';
+import {Text} from './src/components/text'
+import {Img} from './src/components/img'
+import {Boton} from './src/components/boton'
+import {Input} from './src/components/input'
 export default function App() {
+  useState(nombreUsuario, setnombre)
+  useState(contrasena, setContra)
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaViewBase style={styles.container}>
+        <Text contenido = "Login App"/>
+        <Img/>
+        <Input tipo = "text" placeholder = "ingrese su nombre de usuario" contenido = {nombreUsuario}/>
+        <Input/>
+        <Boton/>
+    </SafeAreaViewBase>
   );
 }
 
