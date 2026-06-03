@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View, SafeAreaViewBase} from 'react-native';
-import {Text} from './src/components/text'
-import {Img} from './src/components/img'
-import {Boton} from './src/components/boton'
-import {Input} from './src/components/input'
+import { StyleSheet, View, SafeAreaViewBase} from 'react-native';
+import {useState, useEffects} from 'react'
+import {Text} from './src/components/text.jsx'
+import {Img} from './src/components/img.jsx'
+import {Boton} from './src/components/boton.jsx'
+import {Input} from './src/components/input.jsx'
 export default function App() {
   useState(nombreUsuario, setnombre)
   useState(contrasena, setContra)
-  
   return (
     <SafeAreaViewBase style={styles.container}>
         <Text contenido = "Login App"/>
