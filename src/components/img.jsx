@@ -1,8 +1,9 @@
 import { ImageBackground, View } from "react-native"
 
-const imgExterna = {url: '../img/Coca-Cola-logo.png'}
 
-const img = (imgExterna) =>{
+
+const img = () =>{
+    const imgExterna = {url: '../img/Coca-Cola-logo.png'}
     return(
         <View>
             <ImageBackground>

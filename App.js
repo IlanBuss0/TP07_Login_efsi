@@ -12,8 +12,8 @@ export default function App() {
         <Text contenido = "Login App"/>
         <Img/>
         <Input tipo = "text" placeholder = "ingrese su nombre de usuario" contenido = {nombreUsuario}/>
-        <Input/>
-        <Boton/>
+        <Input tipo = "password" placeholder = "ingrese su contraseña" contenido = {contrasena}/>
+        <Boton contenido = "INGRESAR"/>
     </SafeAreaViewBase>
   );
 }
