@@ -1,6 +1,6 @@
 import { StyleSheet, View, SafeAreaView } from 'react-native';
-import { useState, useEffects } from 'react'
-import Text from './src/components/text.jsx'
+import { useState } from 'react'
+import Texto from './src/components/text.jsx'
 import Img from './src/components/img.jsx'
 import Boton from './src/components/boton.jsx'
 import Input from './src/components/input.jsx'
@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text contenido="Login App" />
+      <Texto contenido="Login App" />
 
       <Img/>
 
@@ -42,7 +42,7 @@ export default function App() {
 
       <Boton contenido="INGRESAR" onPress={validarLogin} />
 
-      {mensaje !== "" && <Text contenido={mensaje} />}
+      {mensaje !== "" && <Texto contenido={mensaje} />}
     </SafeAreaView>
   );
 }
@@ -50,9 +50,22 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    backgroundColor: "#eeeeee",
+  },
+  header: {
+    height: "12%",
+    backgroundColor: "#6f2cff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  logoContainer: {
+    height: "35%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  formulario: {
+    width: "100%",
+    alignItems: "center",
   },
 });

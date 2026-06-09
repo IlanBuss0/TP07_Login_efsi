@@ -1,4 +1,4 @@
-import { ImageBackground, View } from "react-native"
+import { ImageBackground, View, StyleSheet } from "react-native"
 
 
 const imgExterna = {
@@ -18,3 +18,14 @@ export default function img() {
         </View>
     )
 }
+const styles = StyleSheet.create({
+  contenedor: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  imagen: {
+    width: "70%",
+    height: 120,
+  },
+});
