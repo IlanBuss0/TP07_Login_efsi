@@ -1,8 +1,8 @@
 import { Text, View } from "react-native"
-const text = (contenido) =>{
+const text = (props) =>{
     return(
         <View>
-            <Text>{contenido}</Text>
+            <Text>{props.contenido}</Text>
         </View>
     )
 }

@@ -1,10 +1,10 @@
 import {Pressable, Text, View} from "react-native"
-const boton = (contenido) =>{
+const boton = (props) =>{
     return(
         <View>
-            <Pressable onPress={handlePress}>
-                <Text>{contenido}</Text>
-            </Pressable>
+            <Pressable onPress={props.onPress}>
+        <Text>{props.contenido}</Text>
+      </Pressable>
         </View>
     )
 }
