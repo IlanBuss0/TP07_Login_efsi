@@ -1,31 +1,12 @@
-import { ImageBackground, View, StyleSheet } from "react-native"
-
-
-const imgExterna = {
-    uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLzf4PCSdxGhFsPGI2KNwryB6l9LCrC3t0jQ&s",
-};
+import { View, StyleSheet } from "react-native"
 
 export default function img() {
-
-    return (
-        <View>
-            <ImageBackground
-                source={imgExterna}
-                resizeMode={"cover"}
-                style={{ width: 280, height: 200 }}
-            >
-            </ImageBackground>
-        </View>
-    )
+  return <View style={styles.espaciador} />
 }
+
 const styles = StyleSheet.create({
-  contenedor: {
+  espaciador: {
     width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
+    height: 153,
   },
-  imagen: {
-    width: "70%",
-    height: 120,
-  },
-});
+})

@@ -1,32 +1,33 @@
-import {Pressable, Text, View, StyleSheet} from "react-native"
-const boton = (props) =>{
-    return(
-        <View>
-            <Pressable onPress={props.onPress}>
-        <Text>{props.contenido}</Text>
+import { Pressable, Text, View, StyleSheet } from "react-native"
+
+const boton = (props) => {
+  return (
+    <View style={styles.contenedor}>
+      <Pressable style={styles.boton} onPress={props.onPress}>
+        <Text style={styles.texto}>{props.contenido}</Text>
       </Pressable>
-        </View>
-    )
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
   contenedor: {
     width: "86%",
-    marginTop: 18,
-    marginBottom: 10,
+    marginTop: 20,
+    marginBottom: 0,
   },
   boton: {
     width: "100%",
-    height: 42,
-    backgroundColor: "#8b4df6",
+    height: 30,
+    backgroundColor: "#8d54f6",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 3,
+    borderRadius: 2,
   },
   texto: {
     color: "#ffffff",
-    fontSize: 14,
+    fontSize: 13,
   },
-});
+})
 
 export default boton
