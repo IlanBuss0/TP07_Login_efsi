@@ -1,16 +1,19 @@
 import { ImageBackground, View } from "react-native"
 
-const imgExterna = {uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLzf4PCSdxGhFsPGI2KNwryB6l9LCrC3t0jQ&s'}
-const imglocal =require('/assets/background/background-react nng',
 
-export default function img(){
-    
-    return(
+const imgExterna = {
+    uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLzf4PCSdxGhFsPGI2KNwryB6l9LCrC3t0jQ&s",
+};
+
+export default function img() {
+
+    return (
         <View>
-            <ImageBackground>
-                source = {ImgExterna}
-                resizeMode = {"cover"}
-                style = {styles.backgroundImage}
+            <ImageBackground
+                source={imgExterna}
+                resizeMode={"cover"}
+                style={{ width: 280, height: 200 }}
+            >
             </ImageBackground>
         </View>
     )
