@@ -1,15 +1,17 @@
-import { StyleSheet, View, SafeAreaView } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react'
 import Texto from './src/components/text.jsx'
 import Img from './src/components/img.jsx'
 import Boton from './src/components/boton.jsx'
 import Input from './src/components/input.jsx'
+
 export default function App() {
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [contrasena, setContrasena] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-  const USUARIO_VALIDO = "hola@gmail.com";
+  const USUARIO_VALIDO = "simon@galaxies.dev";
   const CONTRASENA_VALIDA = "1234567";
 
   const validarLogin = () => {
@@ -21,48 +23,42 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Texto contenido="Login App" />
+    <View style={styles.container}>
+      <StatusBar style="light" />
+      <Texto tipo="titulo" contenido="Login App (Apellido, Apellido)" />
 
-      <Img/>
+      <Img />
 
-      <Input
-        placeholder="hola@gmail.com"
-        contenido={nombreUsuario}
-        setUsu={setNombreUsuario}
-        seguro={false}
-      />
+      <View style={styles.formulario}>
+        <Input
+          placeholder="simon@galaxies.dev"
+          contenido={nombreUsuario}
+          setUsu={setNombreUsuario}
+          seguro={false}
+        />
 
-      <Input
-        placeholder="********"
-        contenido={contrasena}
-        setUsu={setContrasena}
-        seguro={true}
-      />
+        <Input
+          placeholder="********"
+          contenido={contrasena}
+          setUsu={setContrasena}
+          seguro={true}
+        />
 
-      <Boton contenido="INGRESAR" onPress={validarLogin} />
+        <Boton contenido="INGRESAR" onPress={validarLogin} />
 
-      {mensaje !== "" && <Texto contenido={mensaje} />}
-    </SafeAreaView>
+        <Texto tipo="link" contenido="Olvidaste la clave?" />
+        <Texto tipo="link" contenido="Crear Cuenta" />
+
+        {mensaje !== "" && <Texto tipo="mensaje" contenido={mensaje} />}
+      </View>
+    </View>
   );
 }
 
-
 const styles = StyleSheet.create({
   container: {
-    height: "100%",
+    flex: 1,
     backgroundColor: "#eeeeee",
-  },
-  header: {
-    height: "12%",
-    backgroundColor: "#6f2cff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  logoContainer: {
-    height: "35%",
-    alignItems: "center",
-    justifyContent: "center",
   },
   formulario: {
     width: "100%",
