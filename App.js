@@ -1,4 +1,4 @@
-import { StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react'
 import Texto from './src/components/text.jsx'
@@ -11,7 +11,7 @@ export default function App() {
   const [contrasena, setContrasena] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-  const USUARIO_VALIDO = "simon@galaxies.dev";
+  const USUARIO_VALIDO = "hola@gmail.com";
   const CONTRASENA_VALIDA = "1234567";
 
   const validarLogin = () => {
@@ -23,7 +23,8 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+    <View>
       <StatusBar style="light" />
       <Texto tipo="titulo" contenido="Login App (Apellido, Apellido)" />
 
@@ -31,17 +32,17 @@ export default function App() {
 
       <View style={styles.formulario}>
         <Input
-          placeholder="simon@galaxies.dev"
+          placeholder="hola@gmail.com"
           contenido={nombreUsuario}
           setUsu={setNombreUsuario}
           seguro={false}
         />
 
         <Input
-          placeholder="********"
+          placeholder="1234567"
           contenido={contrasena}
           setUsu={setContrasena}
-          seguro={true}
+          seguro={false} // si ponias true el tipo del input era una especie de password pero la mejor manera de mostrar la contraseña para que angie pueda entrar es poniendolo en false y la contra en el placeholder para que se vea
         />
 
         <Boton contenido="INGRESAR" onPress={validarLogin} />
@@ -52,6 +53,7 @@ export default function App() {
         {mensaje !== "" && <Texto tipo="mensaje" contenido={mensaje} />}
       </View>
     </View>
+    </SafeAreaView>
   );
 }
 
